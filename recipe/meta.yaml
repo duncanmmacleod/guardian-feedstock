@@ -1,5 +1,5 @@
 {% set name = "guardian" %}
-{% set version = "1.4.0" %}
+{% set version = "1.4.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://git.ligo.org/cds/{{ name }}/-/archive/{{ version }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 6770482d090aae5aeabb728a194f13688853ee2567069e9d9e3dfee57b6673b0
+  sha256: 36c673419dd38bb6385937eb9e84110ceb712f326e852086681cde22930c3fc0
 
 build:
   number: 0
