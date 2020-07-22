@@ -5,7 +5,7 @@ Home: https://git.ligo.org/cds/guardian/
 
 Package license: GPL-3.0-or-later
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: aLIGO Guardian
 
