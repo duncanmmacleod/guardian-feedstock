@@ -8,9 +8,11 @@ package:
 source:
   url: https://git.ligo.org/cds/{{ name }}/-/archive/{{ version }}/{{ name }}-{{ version }}.tar.gz
   sha256: e738536404251cf23d9f6ab4a8c766947c3d052d7c0eb044ea8484483725f13e
+  patches:
+    - prefix.patch  # [unix]
 
 build:
-  number: 1
+  number: 2
   skip: true  # [win]
   script: {{ PYTHON }} -m pip install . -vv
 
