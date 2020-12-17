@@ -23,7 +23,6 @@ build:
     - guardutil = guardian.guardutil:main
     - guardctrl = guardctrl.__main__:main
   number: 2
-  skip: true  # [win]
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
