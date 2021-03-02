@@ -47,6 +47,7 @@ requirements:
 
 test:
   requires:
+    - bash >=4.0
     - ezca
   source_files:
     - test/
