@@ -1,0 +1,16 @@
+--- test/lib/test-local.sh	2021-01-11 21:31:59.000000000 +0000
++++ test/lib/test-local.sh.2	2021-03-02 19:58:55.640000000 +0000
+@@ -5,11 +5,9 @@
+     TEST_DIRECTORY=$(cd $(dirname $0)/.. && pwd)
+ fi
+ 
+-export SRC_DIRECTORY=$(cd "$TEST_DIRECTORY"/.. && pwd)
+ export TEST_BIN=$(cd "$TEST_DIRECTORY"/bin && pwd)
+-export PATH="$TEST_BIN":"$SRC_DIRECTORY"/bin:/usr/bin:/bin
+-export PYTHONPATH="$SRC_DIRECTORY"/lib:$PYTHONPATH
+-export PYTHON=python3
++export PATH="$TEST_BIN":$PATH
++export PYTHON=${CONDA_PREFIX}/bin/python
+ 
+ export EPICS_CA_ADDR_LIST='localhost:58900 localhost:58901 localhost:58902 localhost:58903 localhost:58904'
+ export EPICS_CA_AUTO_ADDR_LIST=NO

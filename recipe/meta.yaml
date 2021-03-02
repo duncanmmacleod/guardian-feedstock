@@ -15,6 +15,8 @@ source:
     - guardlog-prefix.patch  # [not win]
     # don't install guardlog at all on windows (it won't work)
     - no-guardlog.patch  # [win]
+    # patch interpreter for tests
+    - test-environment.patch
 
 build:
   entry_points:
@@ -22,7 +24,7 @@ build:
     - guardmedm = guardian.medm.__main__:main
     - guardutil = guardian.guardutil:main
     - guardctrl = guardctrl.__main__:main
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -44,12 +46,12 @@ requirements:
     - termcolor
 
 test:
-  imports:
-    - guardctrl
-    - guardian
+  requires:
+    - ezca
+  source_files:
+    - test/
   commands:
-    - guardian --help
-    - guardutil --help
+    - bash test/guardian-test
 
 about:
   home: https://git.ligo.org/cds/guardian/
